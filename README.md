@@ -2,3 +2,5 @@
 I have created this repository for studying and practicing DevOps
 #
 Also practicing my git and GitHub Skills
+#
+Nice start!
