@@ -44,3 +44,5 @@ if __name__ == "__main__":
     
     print("-" * 40)
     print(f"Розшифроване повідомлення: {decrypted_message}")
+
+# Never give up
