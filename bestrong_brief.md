@@ -1,0 +1,11 @@
+Requirements from "BeStrong" Client (It's fictional company, this requirements used to practice only)
+
+Hi! We finally got our funding. I'll try to explain what we need — apologies in advance if something is unclear, I'm more of a business person than an infrastructure guy.
+    1. Where our code will live — we need something to run our backend. We don't want VMs — too much hassle with updates and security. We want something managed where we just deploy our code and it works. Also important: we want this thing to "introduce itself" to other Azure services without passwords. And it should sit inside our private network, not be exposed to the outside more than necessary. 
+    2. See what's happening — when something crashes, we want to know why. Logs, charts, errors — all in one place. It should be somehow connected to where our code runs. 
+    3. Where to put our containers — we package our app in Docker. We need a private "warehouse" for these images somewhere in Azure. And only our application should be able to pull from it. 
+    4. Safe for passwords — all kinds of API keys, database passwords, tokens — we don't want to keep them in code or configs. We need something specialized for secrets. Access only for our application, and this safe shouldn't be exposed to the public internet. 
+    5. Our private territory — we want all of this to live in an isolated network. Like our own little data center in the cloud. 
+    6. Where to store data — we'll have lots of structured data: users, orders, transactions. We need a proper database that our developers know how to work with (they know SQL Server). Connection — only from inside our network, no public endpoints. 
+    7. For user files — people will upload documents, photos. We need somewhere to store this. Also private, through our network. And our application should see it as a regular folder with files. 
+    8. For your Terraform magic — our previous consultant said that infrastructure state shouldn't be kept on a laptop. Set up something so it's stored reliably in the cloud.
